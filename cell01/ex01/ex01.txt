@@ -1,5 +1,0 @@
-cd ..
-mkdir ex01
-cd ex01
-echo "Z" > z
-cat z
