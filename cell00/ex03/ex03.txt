@@ -1,1 +1,5 @@
-
+$ mkdir ex03
+cd ex03
+$ ni count_files.sh
+code countfiles.sh
+#!/bin/sh
