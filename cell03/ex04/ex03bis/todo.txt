@@ -1,0 +1,58 @@
+let todos = [];
+
+function saveCookie() {
+    document.cookie = "todos=" + JSON.stringify(todos) + "; path=/";
+}
+
+function getCookie(name) {
+    let cookies = document.cookie.split(";");
+
+    for (let c of cookies) {
+        let [key, value] = c.trim().split("=");
+        if (key === name) return value;
+    }
+    return null;
+}
+
+function loadCookie() {
+    let data = getCookie("todos");
+
+    if (data) {
+        todos = JSON.parse(data);
+        todos.forEach(addTodoToDOM);
+    }
+}
+
+function addTodoToDOM(text) {
+
+    let div = $("<div></div>")
+        .addClass("todo")
+        .text(text);
+
+    div.click(function () {
+        if (confirm("Delete this TO DO?")) {
+            todos = todos.filter(t => t !== text);
+            div.remove();
+            saveCookie();
+        }
+    });
+
+    $("#ft_list").prepend(div);
+}
+
+function newTodo() {
+
+    let text = prompt("New TO DO:");
+    if (!text) return;
+
+    todos.unshift(text);
+    addTodoToDOM(text);
+    saveCookie();
+}
+
+$(document).ready(function () {
+
+    $("#newBtn").click(newTodo);
+
+    loadCookie();
+});
