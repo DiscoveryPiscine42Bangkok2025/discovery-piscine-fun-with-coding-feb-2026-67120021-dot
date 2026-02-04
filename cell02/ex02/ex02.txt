@@ -1,3 +1,0 @@
-mkdir ex02
-cd ex02
-echo "ls -m" > midLS
