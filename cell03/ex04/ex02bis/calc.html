@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+
+<input id="left" type="text">
+
+<select id="op">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+    <option>%</option>
+</select>
+
+<input id="right" type="text">
+
+<button id="btn">Try me !</button>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+function calc() {
+
+    let l = Number($("#left").val());
+    let r = Number($("#right").val());
+    let op = $("#op").val();
+
+    if (!Number.isInteger(l) || !Number.isInteger(r) || l < 0 || r < 0) {
+        alert("Error :(");
+        return;
+    }
+
+    if ((op === "/" || op === "%") && r === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+    }
+
+    let result;
+
+    if (op === "+") result = l + r;
+    if (op === "-") result = l - r;
+    if (op === "*") result = l * r;
+    if (op === "/") result = l / r;
+    if (op === "%") result = l % r;
+
+    alert(result);
+    console.log(result);
+}
+
+$("#btn").click(calc);
+
+setInterval(function(){
+    alert("Please, use me...");
+}, 30000);
+
+});
+
+</script>
+
+</body>
+</html>
