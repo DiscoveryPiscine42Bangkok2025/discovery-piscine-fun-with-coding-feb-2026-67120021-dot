@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+
+<input id="left" type="text">
+
+<select id="op">
+    <option>+</option>
+    <option>-</option>
+    <option>*</option>
+    <option>/</option>
+    <option>%</option>
+</select>
+
+<input id="right" type="text">
+
+<button onclick="calc()">Try me !</button>
+
+<script>
+
+function calc() {
+
+    let l = document.getElementById("left").value;
+    let r = document.getElementById("right").value;
+    let op = document.getElementById("op").value;
+
+    l = Number(l);
+    r = Number(r);
+
+    if (!Number.isInteger(l) || !Number.isInteger(r) || l < 0 || r < 0) {
+        alert("Error :(");
+        return;
+    }
+
+    if ((op === "/" || op === "%") && r === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+    }
+
+    let result;
+
+    if (op === "+") result = l + r;
+    if (op === "-") result = l - r;
+    if (op === "*") result = l * r;
+    if (op === "/") result = l / r;
+    if (op === "%") result = l % r;
+
+    alert(result);
+    console.log(result);
+}
+
+/* popup ทุก 30 วินาที */
+setInterval(() => {
+    alert("Please, use me...");
+}, 30000);
+
+</script>
+
+</body>
+</html>
