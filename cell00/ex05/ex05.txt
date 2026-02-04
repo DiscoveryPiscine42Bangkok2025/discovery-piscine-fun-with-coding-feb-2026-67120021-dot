@@ -1,5 +1,11 @@
-#!/bin/bash
-if [ "$#" -eq 0 ]; then
+mkdir ex05
+cd ex05
+touch build.sh
+code build.sh
+  #ใส่ code แล้ว save
+#!/bin/sh
+
+if [ $# -eq 0 ]; then
     echo "No arguments supplied"
 else
     for arg in "$@"
@@ -7,10 +13,7 @@ else
         mkdir "ex$arg"
     done
 fi
-#รันในเทอมินิล
-ls -l
-./build.sh
+chmod +x build.sh
 ./build.sh 00
-ls -l
 ./build.sh 01 02 03 04
-ls -l 
+ls
