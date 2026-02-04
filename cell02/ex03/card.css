@@ -1,0 +1,36 @@
+body{
+    background:#e6b0cc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial;
+}
+
+.card{
+    background:white;
+    width:250px;
+    text-align:center;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 5px 10px gray;
+}
+
+.profile{
+    width:150px;
+    border-radius:10px;
+}
+
+.socials img{
+    width:25px;
+    margin:5px;
+}
+
+button{
+    background:black;
+    color:white;
+    padding:10px;
+    width:100%;
+    border:none;
+    margin-top:10px;
+}
