@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab</title>
+    <style>
+        html, body {
+            margin: 0;
+            height: 100%;
+        }
 
+        table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            text-align: center;
+            vertical-align: middle;
+            font-size: 5vw;
+        }
+    </style>
+</head>
+
+<body>
+
+<table border="1">
+    <tr>
+        <td width="50%" bgcolor="lightblue">First cell</td>
+        <td width="50%" bgcolor="lightpink">Second cell</td>
+    </tr>
+</table>
+
+</body>
+</html>
