@@ -1,0 +1,17 @@
+mkdir ex02
+cd ex02
+ls
+code piscineweb.html
+#ใส่ code ในช่องที่ไม่ใช่เทอมินอล
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Piscine Web</title>
+</head>
+<body>
+    <h1 align="center">Piscine Web</h1>
+
+    <img src="https://images.workpointtoday.com/workpointnews/2022/01/11121712/1641878230_16481_HarryPotterandtheSorcerer_sStone-Poster.webp" width="300">
+    <img src="https://upload.wikimedia.org/wikipedia/th/7/7c/%E0%B9%83%E0%B8%9A%E0%B8%9B%E0%B8%B4%E0%B8%94%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%A2%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87_%E0%B9%81%E0%B8%AE%E0%B8%A3%E0%B9%8C%E0%B8%A3%E0%B8%B5%E0%B9%88_%E0%B8%9E%E0%B8%AD%E0%B8%95%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B8%B1%E0%B8%9A%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%A5%E0%B8%B1%E0%B8%9A_.jpg" width="300">
+</body>
+</html>
