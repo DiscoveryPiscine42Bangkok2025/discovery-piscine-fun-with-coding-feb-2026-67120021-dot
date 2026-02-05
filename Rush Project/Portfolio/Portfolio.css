@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Kanit', cursive;
+
+}
+
+/* ===== Background pastel เหลืองชมพู ===== */
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background: linear-gradient(135deg,
+        #fff6b7,
+        #ffd6ec,
+        #ffeef6);
+}
+
+/* ===== Layout ===== */
+.container{
+    text-align:center;
+    width:90%;
+    max-width:1200px;
+}
+
+.title{
+    font-size:42px;
+    letter-spacing:4px;
+    margin-bottom:50px;
+    font-weight:700;
+    color:#444;
+}
+
+/* ===== Cards ===== */
+.cards{
+    display:flex;
+    gap:40px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:420px;
+    background:rgba(255,255,255,0.9);
+    border-radius:30px;
+    overflow:hidden;
+
+    box-shadow:0 20px 45px rgba(255,150,180,.25);
+    transition:0.35s;
+}
+
+.card:hover{
+    transform:translateY(-12px) scale(1.04);
+    box-shadow:0 30px 70px rgba(255,120,170,.35);
+}
+
+/* image */
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+/* content */
+.content{
+    padding:30px;
+}
+
+.content h2{
+    margin-bottom:20px;
+}
+
+/* ===== Buttons ===== */
+.btn{
+    padding:12px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+/* pink */
+.pink{
+    background:linear-gradient(45deg,#ff9acb,#ff6bb5);
+}
+
+/* yellow */
+.yellow{
+    background:linear-gradient(45deg,#ffd86b,#ffbe3b);
+}
+
+.btn:hover{
+    transform:scale(1.1);
+    filter:brightness(1.1);
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .card{
+        width:100%;
+    }
+}
